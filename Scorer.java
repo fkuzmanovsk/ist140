@@ -10,34 +10,29 @@ public class Scorer {
     public static void main(String[] args){
              // array declared
              double[][] scores = new double[3][3];
-            
+             double[] avg = new double[3];
              
              
              // Scanner initialized
              Scanner scnr = new Scanner(System.in);
              
-        // User prompt,     
-        System.out.println("Enter some numbers human: ");
+            // User prompt
+            System.out.println("Enter some numbers human: ");
         
-        for (int i = 0; i < scores.length; i++) {
-            for (int j = 0; j < scores[i].length; j++) {
-                
-                 scores[i][j] = scnr.nextDouble();
-                 
+            //  nested For loop 
+            for(int i=0;i<3;i++)
+            {
+                avg[i] = 0;
+            for(int j=0;j<3;j++)
+            {
+               scores[i][j] = scnr.nextDouble();
+               avg[i] = scores[i][j]/3+avg[i];
             }
         }
-
-        // Printed the array to show its functionality
-        System.out.println("Your two dimensional array is printed below!");
-        for (double[] a : scores) {
-            for (double i : a) {
-                System.out.print(i + "\t");
-            }
-            System.out.println("\n");
-            
+            // for loop for outputting average
+            for(int i=0;i<3;i++)
+            {
+           System.out.println("Your average for row "+(i+1)+"  is : "+avg[i]);
+            }    
         }
-        
     }
-}
-
-  
