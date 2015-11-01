@@ -8,28 +8,21 @@ public class Averager {
     
     public static void main(String[] args) {
         
+         // Scanner initialized
+         Scanner scnr = new Scanner(System.in);
+         
         // initial variables
-        double posNums;
+        double[] myNums = new double[5];
         double sum = 0;
-        int count = 0;
+        double average = 0;
         
-        // Scanner initialized
-        Scanner scnr = new Scanner(System.in);
-        
-        // do-while loop
-        do
+        for (int i = 0; i < myNums.length; i++)
         {
-            System.out.print("Enter positive numbers here: ");
-            posNums = scnr.nextDouble();
-            sum = sum + posNums;
-            count++;
-            
-        } while (posNums != -1);
-        
-        // once you enter -1 , your average will be calculated
-        System.out.println("average is " + sum / (count - 1));
-       
-               
+            System.out.print("Enter some numbers human: ");
+            myNums[i] = scnr.nextDouble();
+            sum = sum + myNums[i];
+        }
+        average = sum / myNums.length;
+        System.out.println("Your average is " + average);
     }
-    
 }
