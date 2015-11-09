@@ -1,0 +1,54 @@
+
+Write each of these methods in the Unit6ProblemSet.java class.
+When you are finished, zip the Unit6ProblemSet Netbeans folder and submit to the dropbox.
+To create a .zip file in Windows, right-click on the folder and select Send to - Compressed (zipped) folder.
+On the Mac, use the Compress option in the Finder.
+
+Problems:
+
+1. Write a method called bannerPrinter that takes no parameter and has no return value.
+bannerPrinter outputs a greeting to the command line as shown below. (.5 point)
+
+******************************************
+****** Welcome to my eCommerce app! ******
+******************************************
+(print a blank line after the banner)
+
+2. Write a method called productBuilder that takes no parameters and returns an array of Strings.
+In the method body construct and return an array of 5 Strings (call the array products)
+and populate the array with 5 product names. You don't need to get the values from the user, just 
+populate with 5 product names.
+(2 points)
+
+3. Write a method called getOrder that takes an array of Strings as a parameter (the products array) and returns a boolean.
+In the method body, prompt the user to enter a product name (a String), then check whether the product name exists in the array of strings.
+If it exists, return true, otherwise return false. (2 points)
+
+4. Write a method called getPrice that returns a double. 
+In the method body generate a random number between 1 and 100 
+Hint: Math.random() multiplied by a scaling factor, what a pricing strategy!
+and return this value as the price. (1 point)
+
+5. Write a method called getTax that takes a double as a parameter (the price) and returns a double.
+Compute the return value as 10% of the parameter value (ie 10% of the price). This is the tax. (1 point)
+
+6. Write a method called getTotal that takes two doubles as parameters (the price and the tax) and returns a double.
+The return value is computed as the sum of the two parameters (the return value is the sale total). (1 point)
+
+7. Write a method called printTotal that takes a double as a parameter (the sale total) and has no return value.
+This method outputs the following to the command line: "Your sale total is: $X" where X is the sale total parameter value.
+(.5 point)
+
+8. Call each of the methods above from the main method. 
+The pseudocode for the main method will be as given below. (2 points) 
+
+    Print the banner message
+    Get the product array
+    Get the product order from the user and check it exists in the product array
+    If the product exists
+        Get the product price
+        Compute the product tax
+        Compute the total sale
+        Output the total sale
+    Else
+        Output "Product not found."
