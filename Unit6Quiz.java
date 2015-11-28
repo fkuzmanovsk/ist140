@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Unit6Quiz {
 
     public static void main(String[] args) {
+
         // Calling Methods
         searchPlaylist(playListBuilder());
         checkVitals(getVitalSigns());
@@ -50,6 +51,7 @@ public class Unit6Quiz {
         }
         return count;
     }
+    
     //getVitalSigns Method
     public static int[] getVitalSigns()
     {
